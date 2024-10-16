@@ -1,0 +1,59 @@
+﻿<Window x:Class="Pk_lab4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pk_lab4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Background="Pink">
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="493*"/>
+            <ColumnDefinition Width="307*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="sex" Margin="269,295,55,0"  VerticalAlignment="Top" TextAlignment="Center" Background="Deeppink" Foreground="LightPink" FontSize="80" FontWeight="Bold" Height="106">
+            AAA
+        </TextBox>
+        <TextBox x:Name="lev" Margin="18,275,95,0"  VerticalAlignment="Top"  Foreground="Purple"  FontWeight="Bold" Height="40" AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="1" TextChanged="lev_TextChanged">
+            
+        </TextBox>
+        <Button x:Name="dist_lev" Content="Вычислить расстояние"  IsCancel="True" Click="dist_Click" Margin="18,348,60,40" Background="Deeppink" Foreground="LightPink" FontSize="20" FontWeight="Bold" Grid.Column="1"/>
+        <ListBox x:Name="l_words" Margin="282,113,55,168" FontSize="14" FontStyle="Italic" Foreground="Purple" FontWeight="Bold">Список:</ListBox>
+        <TextBox x:Name="tm" AcceptsReturn="True" TextWrapping="Wrap" Margin="282,33,60,355" FontSize="14" FontStyle="Italic" Foreground="Purple" FontWeight="Bold" Grid.ColumnSpan="2">Здесь могла бы быть ваша реклама)))</TextBox>
+        <TextBox x:Name="enter_w" AcceptsReturn="True" TextWrapping="Wrap" Margin="18,113,75,275" TextChanged="enter_w_TextChanged" FontSize="14" FontStyle="Italic" Foreground="Purple" FontWeight="Bold" Grid.Column="1">Введите слово</TextBox>
+        <Button x:Name="acceptButton" Content="Считать файл" IsDefault="True" Click="acceptButton_Click" Margin="53,113,279,275" 
+                 Background="Deeppink" Foreground="LightPink" FontSize="20" FontWeight="Bold">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="escButton" Content="Выход" IsCancel="True" Click="escButton_Click" Margin="53,190,279,203" Background="Deeppink" Foreground="LightPink" FontSize="20" FontWeight="Bold">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Button1" Content="Выбрать файл" IsCancel="True" Click="button1_Click" Margin="53,33,279,355" Background="Deeppink" Foreground="LightPink" FontSize="20" FontWeight="Bold">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="find_w" Content="Найти слово"  IsCancel="True" Click="find_w_Click" Margin="18,194,128,194" Background="Deeppink" Foreground="LightPink" FontSize="20" FontWeight="Bold" Grid.Column="1"/>
+        <Canvas Margin="40,251,249,38">
+            <Path Stroke="DeepPink" StrokeThickness="3" 
+        Data="M 241,200 
+              A 20,20 0 0 0 200,240
+              C 210,250 240,270 240,270
+              C 240,270 260,260 280,240
+              A 20,20 0 0 0 239,200
+              " Height="141" Stretch="Fill" Width="169" HorizontalAlignment="Left" Canvas.Left="10" VerticalAlignment="Top"/>
+        </Canvas>
+    </Grid>
+</Window>
